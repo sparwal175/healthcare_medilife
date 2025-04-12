@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'sparwal175/sparwal175/health_care_app:v0.2'
-        APP_SERVER = 'ec2-user@54.90.150.157'
+        DOCKER_IMAGE = 'sparwal175/health_care_app:v0.2'
+        APP_SERVER = 'ec2-user@34.233.120.123'
     }
  
     stages {
