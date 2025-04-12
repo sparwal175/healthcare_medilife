@@ -29,7 +29,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['app-server-key']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no $APP_SERVER "
+                        ssh -i ~/.ssh/jenkins_ci $APP_SERVER "
                             docker pull $DOCKER_IMAGE &&
                             docker stop myapp || true &&
                             docker rm myapp || true &&
