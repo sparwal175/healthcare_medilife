@@ -29,7 +29,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['app-server-key']) {
                     sh '''
-                        ssh -i ~/.ssh/jenkins_ci $APP_SERVER "
+                        ssh -i /home/ec2-user/.ssh/jenkins_ci $APP_SERVER "
                             docker pull $DOCKER_IMAGE &&
                             docker stop myapp || true &&
                             docker rm myapp || true &&
